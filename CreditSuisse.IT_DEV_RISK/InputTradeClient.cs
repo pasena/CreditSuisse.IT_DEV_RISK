@@ -104,7 +104,7 @@ namespace CreditSuisse.IT_DEV_RISK
             if (!int.TryParse(input, out int tradeNumber))
             {
                 Console.WriteLine("Trade number is in an incorrect format!");
-                ReadReferenceDate();
+                tradeNumber = ReadTradeNumber();
             }
 
             return tradeNumber;
@@ -118,7 +118,7 @@ namespace CreditSuisse.IT_DEV_RISK
             {
                 Console.WriteLine("The reference date is in an incorrect format!");
                 Console.WriteLine("Enter the reference date in the format mm/dd/yyyy");
-                ReadReferenceDate();
+                refereceDate = ReadReferenceDate();
             }
 
             return refereceDate.Date;
